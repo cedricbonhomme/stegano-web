@@ -39,8 +39,8 @@
             </div>
             <div class="images">
                 <div class="message">
-                    <h3>Message hidden in image (right click <span class="glyphicon glyphicon-arrow-right"></span> save as)</h3>
-                    {% if image %}<img id="ItemPreview" src="data:image/png;base64,{{ image }}" />{% endif %}
+                    {% if image %}<h3>Message hidden in image (right click <span class="glyphicon glyphicon-arrow-right"></span> save as)</h3>
+                    <img id="ItemPreview" src="data:image/png;base64,{{ image }}" />{% endif %}
                 </div>
             </div>
         </div>
@@ -58,28 +58,17 @@
                 </form>
                 <div class="clearfix"></div>
             </div>
-            <div class="binary-decode">
+            {% if message %}<div class="binary-decode">
                 <h3>Hidden message</h3>
                 <div class="card">
                     <div class="card-body">
                         {{ message }}
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div class="row">
-        <div class="col-md-12">
-            <hr />
-            <h3>Steganography tools</h3>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="https://github.com/cedricbonhomme/Stegano">Stegano</a>, a Python Steganography tool.</li>
-            </ul>
+            </div>{% endif %}
         </div>
     </div>
+
 
 
 </div>
