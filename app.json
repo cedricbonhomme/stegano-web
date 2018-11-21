@@ -1,0 +1,14 @@
+{
+    "name": "stegano-web",
+    "description": "stegano-web",
+    "website": "https://cedric-onmange-ou.herokuapp.com",
+    "repository": "https://gitlab.com/cedric/cedric-onmange-ou",
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ]
+}

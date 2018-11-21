@@ -1,0 +1,27 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: #e6e6e6;
+}
+.navbar a {
+    color: white;
+}
+.navbar-brand a {
+    color: white;
+}
+.footer a {
+    color: white;
+}
+/* Sticky footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  line-height: 40px; /* Vertically center the text there */
+  color: #e6e6e6;
+  background-color: rgb(107, 91, 149);
+}
