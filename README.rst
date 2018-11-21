@@ -1,10 +1,11 @@
-++++++++++++++++++++
++++++++++++
 stegano web
-++++++++++++++++++++
++++++++++++
 
 Presentation
 ============
 
+This web application uses the `Stegano <https://pypi.org/project/Stegano>`_ library.
 
 Usage
 =====
@@ -12,12 +13,8 @@ Usage
 Deployment
 ----------
 
-This application can be deployed on Heroku.
-
 Deploying the application on Heroku
 '''''''''''''''''''''''''''''''''''
-
-In brief:
 
 .. code:: bash
 

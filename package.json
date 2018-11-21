@@ -1,7 +1,7 @@
 {
-  "name": "cedric-onmange-ou",
-  "version": "0.9.0",
-  "description": "Cédric, on mange où?",
+  "name": "stegano-web",
+  "version": "0.0.1",
+  "description": "stegano-web",
   "scripts": {
     "postinstall": "cd web/static/ ; ln -sf ../../node_modules npm_components"
   },
