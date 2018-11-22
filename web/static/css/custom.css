@@ -3,7 +3,9 @@ html {
     min-height: 100%;
 }
 body {
-    background-color: #e6e6e6;
+    background-color: rgb(246, 248, 250);
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
 .navbar a {
     color: white;
@@ -20,8 +22,12 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 40px;
-  line-height: 40px; /* Vertically center the text there */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
   color: #e6e6e6;
   background-color: rgb(107, 91, 149);
+}
+footer a{
+    color: #FFFFFF;
+    text-decoration-line: underline;
 }

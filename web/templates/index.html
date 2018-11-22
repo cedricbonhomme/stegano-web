@@ -2,6 +2,14 @@
 {% block content %}
 <div class="container">
 
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            Some information about Least Significant Bit steganography.
+            <br /><br />
+        </div>
+    </div>
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link {% if action == 'hide' %}active{% endif %}" id="encode-tab" data-toggle="tab" href="#encode" role="tab" aria-controls="encode" {% if action == 'hide' %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>Encode</a>
@@ -10,6 +18,8 @@
             <a class="nav-link {% if action == 'reveal' %}active{% endif %}" id="decode-tab" data-toggle="tab" href="#decode" role="tab" aria-controls="decode" {% if action == 'reveal' %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>Decode</a>
         </li>
     </ul>
+
+    <br />
 
     <div id="my-tab-content" class="tab-content">
         <div class="tab-pane {% if action == 'hide' %}show active{% endif %}" id="encode">
@@ -25,7 +35,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="encode btn btn-default pull-right">Encode</button>
+                        <button class="encode btn btn-primary pull-right">Encode</button>
                     </div>
                 </form>
                 <div class="clearfix"></div>
@@ -53,7 +63,7 @@
                         <input class="form-control" type="file" name="file" />
                     </div>
                     <div class="form-group">
-                        <button class="decode btn btn-default pull-right">Decode</button>
+                        <button class="decode btn btn-primary pull-right">Decode</button>
                     </div>
                 </form>
                 <div class="clearfix"></div>
@@ -68,9 +78,5 @@
             </div>{% endif %}
         </div>
     </div>
-
-
-
 </div>
-
-    {% endblock %}
+{% endblock %}
