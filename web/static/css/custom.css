@@ -27,7 +27,7 @@ body {
   color: #e6e6e6;
   background-color: rgb(107, 91, 149);
 }
-footer a{
+.footer a{
     color: #FFFFFF;
     text-decoration-line: underline;
 }
