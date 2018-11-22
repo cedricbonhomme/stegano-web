@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import io
-from base64 import b64encode
-from flask import render_template, jsonify, request, flash
+from flask import render_template, jsonify, request, flash, send_file
 from stegano import lsb
 
 from web import app, allowed_file
@@ -40,16 +39,19 @@ def index():
                 # hide the secret
                 secret_to_hide = request.form.get('secret')
                 image = lsb.hide(file, secret_to_hide)
-                # convert the result (BytesIO) to a base64 string
+                # convert the result to BytesIO
                 outputBytes = io.BytesIO()
                 image.save(outputBytes, "PNG")
                 outputBytes.seek(0)
-                base64Img = b64encode(outputBytes.getvalue()).decode()
+                return send_file(outputBytes,
+                                    mimetype='image/png',
+                                    as_attachment=True,
+                                    attachment_filename='secret.png')
         elif not allowed_file(file.filename):
             flash('File type not allowed (only png or jpeg).', 'danger')
 
-    return render_template('index.html', action=action, message=message,
-                            image=base64Img)
+    return render_template('index.html', action=action, message=message)
+
 
 @app.route('/encode', methods=['POST'])
 def encode():
@@ -57,14 +59,13 @@ def encode():
     """
     pass
 
+
 @app.route('/decode', methods=['POST'])
 def decode():
     """
     """
     print(request.files)
     return redirect(url_for('projects_bp.list_projects'))
-
-
 
 
 @app.errorhandler(404)
