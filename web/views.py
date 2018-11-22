@@ -6,7 +6,7 @@ from base64 import b64encode
 from flask import render_template, jsonify, request, flash
 from stegano import lsb
 
-from web import app
+from web import app, allowed_file
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -24,15 +24,15 @@ def index():
 
         # check if the post request has the file part
         if 'file' not in request.files:
-            flash('No file part')
+            flash('No file part', 'danger')
             return redirect(request.url)
         file = request.files['file']
         # if user does not select file, browser also
         # submit an empty part without filename
         if file.filename == '':
-            flash('No selected file')
+            flash('No selected file', 'danger')
             return redirect(request.url)
-        if file:
+        if file and allowed_file(file.filename):
             if 'reveal' == action:
                 # reveal the secret
                 message = lsb.reveal(file)
@@ -45,6 +45,8 @@ def index():
                 image.save(outputBytes, "PNG")
                 outputBytes.seek(0)
                 base64Img = b64encode(outputBytes.getvalue()).decode()
+        elif not allowed_file(file.filename):
+            flash('File type not allowed (only png or jpeg).', 'danger')
 
     return render_template('index.html', action=action, message=message,
                             image=base64Img)
