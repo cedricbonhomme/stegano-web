@@ -1,52 +1,41 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container">
-
-    <div class="row">
-        <div class="col-md-12">
-            <br />
-            Some information about Least Significant Bit steganography.
-            <br /><br />
-        </div>
-    </div>
-
+    <br />
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link {% if action == 'hide' %}active{% endif %}" id="encode-tab" data-toggle="tab" href="#encode"
-		    role="tab" aria-controls="encode" {% if action == 'hide' %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>Hide</a>
+            <a class="nav-link {% if action == 'hide' %}active{% endif %}" id="hide-tab" data-toggle="tab" href="#hide"
+		    role="tab" aria-controls="hide" {% if action == 'hide' %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>Hide</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {% if action == 'reveal' %}active{% endif %}" id="decode-tab" data-toggle="tab" href="#decode"
-		    role="tab" aria-controls="decode" {% if action == 'reveal' %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>Reveal</a>
+            <a class="nav-link {% if action == 'reveal' %}active{% endif %}" id="reveal-tab" data-toggle="tab" href="#reveal"
+		    role="tab" aria-controls="reveal" {% if action == 'reveal' %}aria-selected="true"{% else %}aria-selected="false"{% endif %}>Reveal</a>
         </li>
     </ul>
 
     <br />
 
     <div id="my-tab-content" class="tab-content">
-        <div class="tab-pane {% if action == 'hide' %}show active{% endif %}" id="encode">
+        <div class="tab-pane {% if action == 'hide' %}show active{% endif %}" id="hide">
             <div>
                 <h2>Hide a message</h2>
                 <form id="hide" class="form" method="POST" action="/?action=hide" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input class="form-control" type="file" name="file">
+                        <input class="form-control " type="file" name="file">
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control message" rows="3" name="secret" placeholder="Enter your message here"></textarea>
+                        <textarea class="form-control" rows="3" name="secret" placeholder="Enter your message here"></textarea>
                     </div>
 
                     <div class="form-group">
-                        <button class="encode btn btn-primary pull-right">Hide</button>
+                        <button type="submit" class="btn btn-primary">Hide</button>
                     </div>
                 </form>
-                <div class="clearfix"></div>
             </div>
-
-            <div class="error" style="display: none;"></div>
         </div>
 
-        <div class="tab-pane {% if action == 'reveal' %}show active{% endif %}" id="decode">
+        <div class="tab-pane {% if action == 'reveal' %}show active{% endif %}" id="reveal">
             <div>
                 <h2>Reveal a message</h2>
                 <form id=reveal class="form" method="POST" action="/?action=reveal" enctype="multipart/form-data">
@@ -54,19 +43,18 @@
                         <input class="form-control" type="file" name="file" />
                     </div>
                     <div class="form-group">
-                        <button class="decode btn btn-primary pull-right">Reveal</button>
+                        <button type="submit" class="btn btn-primary">Reveal</button>
                     </div>
                 </form>
-                <div class="clearfix"></div>
             </div>
-            {% if message %}<div class="binary-decode">
+            {% if message %}
                 <h3>Hidden message</h3>
                 <div class="card">
                     <div class="card-body">
                         {{ message }}
                     </div>
                 </div>
-            </div>{% endif %}
+            {% endif %}
         </div>
     </div>
 </div>

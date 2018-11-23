@@ -22,12 +22,17 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  height: auto;
+  line-height: auto; /* Vertically center the text there */
   color: #e6e6e6;
   background-color: rgb(107, 91, 149);
 }
 .footer a{
     color: #FFFFFF;
     text-decoration-line: underline;
+}
+
+/* Fix the overlapping problem of file inputs with Firefox */
+.form-control {
+    height: auto;
 }
