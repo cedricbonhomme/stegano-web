@@ -21,11 +21,11 @@
                 <h2>Hide a message</h2>
                 <form id="hide" class="form" method="POST" action="/?action=hide" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input class="form-control " type="file" name="file">
+                        <input class="form-control " type="file" name="file" required>
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" rows="3" name="secret" placeholder="Enter your message here"></textarea>
+                        <textarea class="form-control" rows="3" name="secret" placeholder="Enter your message here" required></textarea>
                     </div>
 
                     <div class="form-group">
@@ -40,7 +40,7 @@
                 <h2>Reveal a message</h2>
                 <form id=reveal class="form" method="POST" action="/?action=reveal" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input class="form-control" type="file" name="file" />
+                        <input class="form-control" type="file" name="file" required />
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Reveal</button>
