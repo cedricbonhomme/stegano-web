@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import io
-from flask import render_template, jsonify, request, flash, send_file
+from flask import render_template, redirect, jsonify, request, flash, send_file
 from stegano import lsb
 
 from web import app, allowed_file
@@ -25,14 +25,14 @@ def index():
 
         if 'file' not in request.files:
             # check if the post request has the file part
-            flash('No file part', 'danger')
+            flash('File is missing.', 'danger')
             return redirect(request.url)
         file = request.files['file']
 
         if file.filename == '':
             # if user does not select file, browser also
             # submit an empty part without filename
-            flash('No selected file', 'danger')
+            flash('File is missing.', 'danger')
             return redirect(request.url)
 
         if file and allowed_file(file.filename):
