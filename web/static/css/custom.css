@@ -22,8 +22,8 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: auto;
-  line-height: auto; /* Vertically center the text there */
+  height: 40px;
+  line-height: 40px; /* Vertically center the text there */
   color: #e6e6e6;
   background-color: rgb(107, 91, 149);
 }
