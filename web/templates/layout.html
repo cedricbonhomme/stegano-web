@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   {% block head %}
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Stegano Web" />
     <meta name="author" content="Cédric Bonhomme" />
     <title>Stegano Web</title>
@@ -33,7 +33,6 @@
         </div>
         {% endblock %}
     </nav>
-
     <div class="container">
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -47,14 +46,12 @@
     {% endif %}
     {% endwith %}
     </div>
-
     {% block content %}{% endblock %}
-
     <br />
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-truncate">
 		    <a href="https://github.com/cedricbonhomme/stegano-web">This software</a> is using
 		    the Python <a href="https://pypi.python.org/pypi/Stegano">Stegano</a> library
                     and is under AGPLv3 license.
