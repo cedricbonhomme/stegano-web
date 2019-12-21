@@ -5,7 +5,7 @@ stegano web
 Presentation
 ============
 
-This web application uses the `Stegano <https://pypi.org/project/Stegano>`_ library.
+This web application uses the `Stegano <https://pypi.org/project/stegano>`_ library.
 
 Usage
 =====
