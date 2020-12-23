@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "stegano-web"
+version = "0.1.0"
+description = "Web application using the Python Stegano library."
+authors = ["Cédric Bonhomme <cedric@cedricbonhomme.org>"]
+license = "AGPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "^1.1.2"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
