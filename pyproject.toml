@@ -9,6 +9,7 @@ license = "AGPL-3.0-or-later"
 python = "^3.9"
 Flask = "^1.1.2"
 requests = "^2.25.1"
+stegano = "^0.9.9"
 
 [tool.poetry.dev-dependencies]
 
