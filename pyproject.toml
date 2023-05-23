@@ -7,7 +7,7 @@ license = "AGPL-3.0-or-later"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
-Flask = "^2.3.2"
+Flask = "^2.2.5"
 requests = "^2.31.0"
 stegano = "^0.10.1"
 
