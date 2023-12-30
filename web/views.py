@@ -26,14 +26,14 @@ def index():
         if "file" not in request.files:
             # check if the post request has the file part
             flash("File is missing.", "danger")
-            return redirect(request.url)
+            return redirect("/")
         file = request.files["file"]
 
         if file.filename == "":
             # if user does not select file, browser also
             # submit an empty part without filename
             flash("File is missing.", "danger")
-            return redirect(request.url)
+            return redirect("/")
 
         if file and allowed_file(file.filename):
             # an appropriate file has been submitted
@@ -74,3 +74,4 @@ def not_found(error=None):
     resp = jsonify(message)
     resp.status_code = 404
     return resp
+
