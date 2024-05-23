@@ -31,4 +31,4 @@ Deploying the application on Heroku
 Contact
 =======
 
-`My home page <https://www.cedricbonhomme.org/>`_.
+`My home page <https://www.cedricbonhomme.org>`_.
