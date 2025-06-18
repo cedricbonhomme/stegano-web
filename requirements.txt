@@ -323,9 +323,9 @@ requests==2.31.0 ; python_full_version >= "3.8.1" and python_version < "3.12" \
 stegano==0.11.2 ; python_full_version >= "3.8.1" and python_version < "3.12" \
     --hash=sha256:76c6a9e3a574a15b0d781394994d1d3ba10e93068994b1eb47da9e6be268da58 \
     --hash=sha256:dfd31c1d1eae754a9c0a8175281e075cd6cad75da0561220b95f342bb6b55175
-urllib3==2.1.0 ; python_full_version >= "3.8.1" and python_version < "3.12" \
-    --hash=sha256:55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3 \
-    --hash=sha256:df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54
+urllib3==2.5.0 ; python_full_version >= "3.8.1" and python_version < "3.12" \
+    --hash=sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760 \
+    --hash=sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc
 werkzeug==3.0.6 ; python_full_version >= "3.8.1" and python_version < "3.12" \
     --hash=sha256:1bc0c2310d2fbb07b1dd1105eba2f7af72f322e1e455f2f93c993bee8c8a5f17 \
     --hash=sha256:a8dd59d4de28ca70471a34cba79bed5f7ef2e036a76b3ab0835474246eb41f8d
