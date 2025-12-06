@@ -326,9 +326,9 @@ stegano==0.11.2 ; python_full_version >= "3.8.1" and python_version < "3.12" \
 urllib3==2.6.0 ; python_full_version >= "3.8.1" and python_version < "3.12" \
     --hash=sha256:c90f7a39f716c572c4e3e58509581ebd83f9b59cced005b7db7ad2d22b0db99f \
     --hash=sha256:cb9bcef5a4b345d5da5d145dc3e30834f58e8018828cbc724d30b4cb7d4d49f1
-werkzeug==3.0.6 ; python_full_version >= "3.8.1" and python_version < "3.12" \
-    --hash=sha256:1bc0c2310d2fbb07b1dd1105eba2f7af72f322e1e455f2f93c993bee8c8a5f17 \
-    --hash=sha256:a8dd59d4de28ca70471a34cba79bed5f7ef2e036a76b3ab0835474246eb41f8d
+werkzeug==3.1.4 ; python_full_version >= "3.8.1" and python_version < "3.12" \
+    --hash=sha256:2ad50fb9ed09cc3af22c54698351027ace879a0b60a3b5edf5730b2f7d876905 \
+    --hash=sha256:cd3cd98b1b92dc3b7b3995038826c68097dcb16f9baa63abe35f20eafeb9fe5e
 zipp==3.17.0 ; python_full_version >= "3.8.1" and python_version < "3.10" \
     --hash=sha256:0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31 \
     --hash=sha256:84e64a1c28cf7e91ed2078bb8cc8c259cb19b76942096c8d7b84947690cabaf0
